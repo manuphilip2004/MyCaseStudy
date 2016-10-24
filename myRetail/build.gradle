@@ -1,0 +1,36 @@
+group 'com.casestudy.myretail'
+version '1.0'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'spring-boot'
+
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:1.4.0.RELEASE")
+    }
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+
+    compile group: 'org.springframework.data', name: 'spring-data-mongodb', version: '1.9.3.RELEASE'
+    compile group: 'org.springframework', name: 'spring-context', version: '4.3.2.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web")
+    compile group: 'org.json', name: 'json', version: '20160810'
+    compile group: 'org.springframework.restdocs', name: 'spring-restdocs-mockmvc', version: '1.1.1.RELEASE'
+    compile group: 'org.springframework.boot', name: 'spring-boot-starter-test', version: '1.4.0.RELEASE'
+    compile group: 'org.mockito', name: 'mockito-all', version: '1.8.4'
+    compile group: 'junit', name: 'junit', version: '4.12'
+
+}
